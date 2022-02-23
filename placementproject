@@ -1,0 +1,23 @@
+import sqlite3
+
+conn=sqlite3.connect("cinema.db")
+print("Database created successfully!")
+
+#conn.execute("create table movies(id int,name text,actor text,actress text,director text,year of release text)")
+print("table created successfully!!")
+conn.execute("insert into movies values(1,'Shershah','Sidhdharth malhotra','Kiara adwani','Vishnuvardhan','march-2020')")
+conn.execute("insert into movies values(2,'fast&furious','dominic torento','michelle rodriz','tarantino','march-2018')")
+conn.execute("insert into movies values(3,'harry potter','Dan Radcliff','Emma watson','chris coliumbus','jan-2016')")
+conn.execute("insert into movies values(4,'Sultan','Salman Khan','Anushka Sharma','bakkriyaj kanan','april-2021')")
+conn.execute("insert into movies values(5,'M.S.Dhoni-The Untold Story','Shushantsingh rajput','Kiara adwani','Neeraj Pandey','Sept-2016')")
+print("Data inserted Successfully!")
+
+conn.commit()
+data=conn.execute("select * from movies")
+for row in data:
+        print("id:",row[0])
+        print("name:",row[1])
+        print("actor:",row[2])
+        print("actress:",row[3])
+        print("director:",row[4])
+        print("releaseofyear:",row[5])
