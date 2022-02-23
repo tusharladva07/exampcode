@@ -3,7 +3,7 @@ import sqlite3
 conn=sqlite3.connect("cinema.db")
 print("Database created successfully!")
 
-#conn.execute("create table movies(id int,name text,actor text,actress text,director text,year of release text)")
+conn.execute("create table movies(id int,name text,actor text,actress text,director text,year of release text)")
 print("table created successfully!!")
 conn.execute("insert into movies values(1,'Shershah','Sidhdharth malhotra','Kiara adwani','Vishnuvardhan','march-2020')")
 conn.execute("insert into movies values(2,'fast&furious','dominic torento','michelle rodriz','tarantino','march-2018')")
